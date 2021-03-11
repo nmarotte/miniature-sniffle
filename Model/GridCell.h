@@ -14,8 +14,10 @@ class GridCell {
     float leftest_latitude{};  // y
     float lowest_altitude{};   // z
     std::set<Component> components;    // What the cell contains : cities, grass, animals, air, water, etc
-
+public:
     void update();
+
+    std::list<GridCell> neighbors;
 };
 
 

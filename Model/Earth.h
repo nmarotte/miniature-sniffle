@@ -6,12 +6,19 @@
 #define PRETHESIS_EARTH_H
 
 
+#include <list>
 #include "GridCell.h"
 
 class Earth {
-    unsigned int time;
-    float cell_size;
-    GridCell cells[];
+public:
+    Earth(double cellVolume, double nbCells);
+    void update();
+
+private:
+    unsigned int time = 0;
+    double cellVolume;
+    double nbCells;
+    std::list<std::list<std::list<GridCell>>> cells;
 
 };
 
